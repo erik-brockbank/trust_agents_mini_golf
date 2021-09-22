@@ -1,0 +1,46 @@
+#instructions-container {
+    font-family: 'Roboto Slab';
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 50px;
+    background-color: white;
+    border-radius: 25px;
+    transition: 0.2s;
+}
+
+#inst-button-container {
+    width: 900px;
+    text-align: center;
+}
+
+#temp-container {
+    color: grey;
+    border: lightgray solid 1px;
+    padding: 25px;
+    margin-top: 25px;
+}
+
+#next-inst {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+    padding: 10px 20px;
+    margin: 4px 2px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#next-inst:hover {
+    color: white;
+    background-color: #4CAF50;
+    font-size: 16px;
+}
+
+#canvas-mid {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}

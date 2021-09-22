@@ -1,0 +1,455 @@
+body {
+    background-color: lightgray;
+}
+
+#experiment-container {
+    font-family: 'Roboto Slab';
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 50px;
+    background-color: white;
+    border-radius: 25px;
+    transition: 0.2s;
+}
+
+
+#video-container {
+    font-family: 'Roboto Slab';
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 50px;
+    background-color: white;
+    border-radius: 25px;
+    transition: 0.2s;
+}
+
+#message-container {
+    font-size: 28px;
+    font-style: italic;
+    text-align: center;
+}
+
+#game-container {
+    text-align: center;
+}
+
+#game-banner {
+    font-size: 20px;
+    padding: 8px;
+    margin-bottom: 50px;
+}
+
+#round-text, #round-index, #time-text, #countdown {
+    display: inline-flex;
+}
+
+#client-info {
+    width: 400px;
+    float: left;
+}
+
+#client-header {
+    font-size: 28px;
+    text-decoration: underline;
+}
+
+#client-points-update {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 4px;
+}
+
+#client-points-total {
+    font-size: 20px;
+    font-style: italic;
+    padding: 4px;
+}
+
+#client-body {
+    padding: 10px;
+}
+
+#agent-info {
+    width: 400px;
+    float: left;
+}
+
+#agent-header {
+    font-size: 28px;
+}
+
+#agent-points-update {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 4px;
+}
+
+#agent-points-total {
+    font-size: 20px;
+    font-style: italic;
+    padding: 4px;
+}
+
+#agent-body {
+    padding: 10px;
+}
+
+#opponent-info {
+    width: 400px;
+    float: right;
+}
+
+#opponent-header {
+    font-size: 28px;
+    color: gray;
+}
+
+#opponent-points-update {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 4px;
+}
+
+#opponent-points-total {
+    font-size: 20px;
+    font-style: italic;
+    padding: 4px;
+}
+
+#opponent-body {
+    padding: 10px;
+}
+
+.move-button {
+    height: 100px;
+    width: 100px;
+}
+
+.move-button-container{
+    height: 100px;
+    width: 100px;
+    padding: 5px;
+    display: inline-flex;
+    border: 5px solid transparent;
+}
+
+.move-button-container:hover {
+    background:gray;
+}
+
+.opponent-move {
+    height: 100px;
+    width: 100px;
+    padding: 5px;
+    display: inline-flex;
+    border: 5px solid transparent;
+    opacity: 0.2;
+    transition: 0.2s;
+}
+
+.opponent-move-img {
+    height: 100px;
+    width: 100px;
+}
+
+.agent-move {
+    height: 100px;
+    width: 100px;
+    padding: 5px;
+    display: inline-flex;
+    border: 5px solid transparent;
+    opacity: 0.2;
+    transition: 0.2s;
+}
+
+.agent-img {
+    height: 100px;
+    width: 100px;
+}
+
+.avatar {
+    margin: auto;
+    height: 100px;
+    padding-bottom: 50px;
+}
+
+.icon {
+    background-color: rgb(255, 255, 255);
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    font-size: 70px;
+    margin: auto;
+}
+.base {
+    margin: auto;
+    height: 40px;
+    width: 200px;
+    margin-top: -20px;
+}
+
+#countdown {
+    /* position: fixed; */
+    /* width: 900px; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    margin-top: 5%;
+    font-size: 66px;
+}
+
+
+#agent-base {
+    transform: skew(-10deg);
+    /* background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,168,255,0.1) 100%); */
+    background: rgba(100, 100, 100, 0.1);
+}
+
+#opponent-icon {
+    border: 10px solid rgb(181, 181, 181);
+}
+
+#opponent-base {
+    transform: skew(10deg);
+    /* background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(100,100,100,0.1) 100%); */
+    background: rgba(100, 100, 100, 0.1);
+}
+
+
+#exp-button-container {
+    padding: 10px;
+}
+
+.next-button {
+    background-color: white;
+    color: black;
+    border: 2px solid #2f00ff;
+    font-size: 33px;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 50px 5px 2px;
+    font-family: 'Roboto Slab';
+    border-radius: 30px;
+    transition: 0.1s;
+}
+
+.next-button:hover {
+    background-color: #f3f3f3;
+}
+
+.next-button:active {
+    background-color: #e7e7e7;
+}
+
+#schematic-img {
+    width: 300px;
+    padding: 20px;
+}
+
+
+
+/* Styling for survey container
+ */
+
+#survey-container {
+    text-align: center;
+}
+
+#survey-banner {
+    font-size: 20px;
+    padding: 20px;
+}
+
+#survey-eval {
+    padding: 10px;
+}
+
+.survey-slider-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
+
+/* Adapted from w3schools /*
+
+/* The container */
+.radio-container {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: -13px;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .checkmark {
+  background-color: #2f00ff;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+.radio-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 88%;
+    margin: 0 auto;
+}
+
+/* Slider style below copied from go_fish with minimal modifications
+ */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+/*
+ * This copied from go_fish with minimal modifications
+ * -> originally taken from top response here:
+ * https://stackoverflow.com/questions/33699852/show-tick-positions-in-custom-range-input
+ */
+ .sliderticks {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px; /* customized this to look best */
+  }
+
+.sliderticks p {
+    display: flex;
+    justify-content: center;
+    width: 2px; /* customized this to look best */
+    background: #D3D3D3;
+    height: 10px;
+    line-height: 40px;
+    margin: 0 0 0px 0;
+}
+
+/* This should match sliderticks above */
+.sliderlabels {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+    /* padding: 0 12px; */
+}
+
+
+.sliderlabels p {
+    display: flex;
+    /* text-align: left; */
+    margin: 0 0 0 0;
+    max-width: 120px;
+}
+
+#sidebar {
+    position: fixed;
+}
+
+.agent-label-current {
+    opacity: 1.0;
+}
+
+.agent-label {
+    opacity: 0.2;
+}
+
+.blue {
+    color: rgb(111, 160, 233);
+}
+
+.blue-border {
+    border: 10px solid rgb(111, 160, 233);
+}
+
+.purple {
+    color: rgb(167, 125, 216);
+}
+
+.purple-border {
+    border: 10px solid rgb(167, 125, 216);
+}
+
+.teal {
+    color: rgb(3, 171, 180);
+}
+
+.teal-border {
+    border: 10px solid rgb(3, 171, 180);
+}
+
+.icon-img {
+    width: 70px;
+    padding: 14px;
+}

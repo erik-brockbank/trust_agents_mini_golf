@@ -20,17 +20,24 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
 
-const UUID = require("uuid"); // UUID library for generating unique IDs
+const { v4: uuidV4} = require('uuid');; // UUID library for generating unique IDs
 var expt_handler = require(__dirname + JSPATH + "/" + "expt.js"); // object for keeping track of experiment status
 
 
 
+// app.js TODO
+// Proper istest assignment
+// Disconnect handling
+    // Properly deleting finished games from expt_handler
 
+
+
+// Initialize server
 server.listen(3000, () => {
     console.log("app.js:\t listening on *:3000");
 });
 
-// Initializing server
+
 // General purpose getter for js files
 app.get("/*", function(req, res) {
     var file = req.params[0];
@@ -40,53 +47,45 @@ app.get("/*", function(req, res) {
 // socket.io will call this function when a client connects
 io.on("connection", function (client) {
     console.log("app.js:\t new user connected");
-    // client.userid = UUID();
-    client.userid = 'a1'; // TODO why does uuid call above fail?
+    client.userid = uuidV4();
     // tell the client it connected successfully and pass along unique ID
     client.emit("on_connected", {id: client.userid});
     initializeClient(client);
 });
 
 
-// Function to handle socket interactions between game_server and clients
+/*
+ * Function to handle subsequent socket interactions between expt_handler and clients
+ */
 initializeClient = function(client) {
     // extract relevant info from client request
     var istest = client.handshake.query.istest == "true";
-
     expt_handler.newExpt(client, istest);
 
-    // handle subsequent client interactions
+    // handler for client finishing instructions
     client.on("finished_instructions", function() {
-        // game_handler.createGame(client, versions, istest, index=1);
         console.log("app.js:\t client finished instructions.");
         expt_handler.startExpt(client);
     })
 
-    // handle player signal that they're ready for the next round
+    // handler for player signaling that they're ready for the survey
     client.on("request_survey", function() {
         console.log("app.js:\t detected survey request.");
-        // game_handler.logTimes(client, data)
         expt_handler.showSurvey(client);
     });
 
-    // handle player signal that they're ready for the next round
+    // handler for player signaling that they're ready for the next round
     client.on("survey_submit", function(data) {
         console.log("app.js:\t detected survey submission.");
         expt_handler.recordSurveyData(client, data);
         expt_handler.updateRound(client);
     });
 
-    // // handle player signal that they're ready for the next game
-    // client.on("next_game", function(data) {
-    //     console.log("app.js:\t detected next game");
-    //     game_handler.nextGame(client, data);
-    // });
-
-    // // handle player submitting exit survey slider data
-    // client.on("slider_submit", function(data) {
-    //     console.log("app.js:\t detected player Likert slider submission");
-    //     game_handler.recordSliderData(data);
-    // });
+    // handler for player signaling that they're ready for the next round against a new agent
+    client.on("start_next_agent", function() {
+        console.log("app.js:\t detected next agent start request.");
+        expt_handler.startNextRound(client);
+    });
 
     // // handle disconnect
     // client.on("disconnect", function() {

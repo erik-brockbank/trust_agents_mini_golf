@@ -33,8 +33,8 @@ var expt_handler = require(__dirname + JSPATH + "/" + "expt.js"); // object for 
 
 
 // Initialize server
-server.listen(3000, () => {
-    console.log("app.js:\t listening on *:3000");
+server.listen(8857, () => {
+    console.log("app.js:\t listening on *:8857");
 });
 
 

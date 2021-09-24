@@ -5,7 +5,6 @@
  * 2. `node app.js`
  * 3. in browser, visit http://localhost:3000/index.html
  *    -> to run a test version, visit http://localhost:3000/index.html?&mode=test
- *    -> append the same &mode=test to the bot version for testing
  */
 
 
@@ -22,13 +21,6 @@ const io = new Server(server);
 
 const { v4: uuidV4} = require('uuid');; // UUID library for generating unique IDs
 var expt_handler = require(__dirname + JSPATH + "/" + "expt.js"); // object for keeping track of experiment status
-
-
-
-// app.js TODO
-// Proper istest assignment
-// Disconnect handling
-    // Properly deleting finished games from expt_handler
 
 
 
@@ -87,9 +79,9 @@ initializeClient = function(client) {
         expt_handler.startNextRound(client);
     });
 
-    // // handle disconnect
-    // client.on("disconnect", function() {
-    //     console.log("app.js:\t detected client disconnect");
-    //     game_handler.clientDisconnect(client);
-    // });
+    // handle disconnect
+    client.on("disconnect", function() {
+        console.log("app.js:\t detected client disconnect");
+        expt_handler.clientDisconnect(client);
+    });
 };

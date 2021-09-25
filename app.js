@@ -73,10 +73,10 @@ initializeClient = function(client) {
         expt_handler.updateRound(client);
     });
 
-    // handler for player signaling that they're ready for the next round against a new agent
-    client.on("start_next_agent", function() {
-        console.log("app.js:\t detected next agent start request.");
-        expt_handler.startNextRound(client);
+    // handler for player submitting debrief data
+    client.on("debrief_submit", function(data) {
+        console.log("app.js:\t detected debrief submission.");
+        expt_handler.recordDebriefData(client, data);
     });
 
     // handle disconnect

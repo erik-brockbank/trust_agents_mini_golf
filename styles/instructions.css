@@ -8,6 +8,7 @@
     background-color: white;
     border-radius: 25px;
     transition: 0.2s;
+    text-align: center;
 }
 
 #inst-button-container {
@@ -43,4 +44,8 @@
     width: 600px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.instruction-img {
+    border: 5px solid rgb(111, 160, 233);
 }

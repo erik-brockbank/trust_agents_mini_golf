@@ -97,6 +97,22 @@ body {
     padding-top: 20px;
 }
 
+#survey-debrief {
+    padding: 25px;
+}
+
+#free-resp-debrief {
+    padding: 25px;
+}
+
+.debrief-slider-container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
+
+
 /* Adapted from w3schools
  */
 /* The container */

@@ -1,0 +1,11 @@
+{
+  "debrief_start_ts": "2021-09-28T05:26:49.434Z",
+  "slider1_text": "<p>How close do you think the robot would be to hitting a target in a <i>new location</i> in the sandpit, with the <i>same ramp and ball?</i></p>",
+  "slider1_response": "1",
+  "slider2_text": "<p>How close do you think the robot would be to hitting a target in a <i>familiar location</i> in the sandpit, with the <i>same ramp</i> but a <i>new ball that was twice as heavy?</i></p>",
+  "slider2_response": "9",
+  "free_response": "asldfkj",
+  "debrief_end_ts": "2021-09-28T05:26:59.533Z",
+  "client_id": "94f179c8-218d-4d35-b875-9f44c9aaa6cf",
+  "agent_type": "high_competence_agent"
+}

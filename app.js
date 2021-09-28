@@ -39,9 +39,10 @@ app.get("/*", function(req, res) {
 // socket.io will call this function when a client connects
 io.on("connection", function (client) {
     console.log("app.js:\t new user connected");
+    client.istest = client.handshake.query.istest == "true";
     client.userid = uuidV4();
     // tell the client it connected successfully and pass along unique ID
-    client.emit("on_connected", {id: client.userid});
+    client.emit("on_connected", {id: client.userid}); // NB: client doesn't currently do anything with passed in id
     initializeClient(client);
 });
 
@@ -51,8 +52,7 @@ io.on("connection", function (client) {
  */
 initializeClient = function(client) {
     // extract relevant info from client request
-    var istest = client.handshake.query.istest == "true";
-    expt_handler.newExpt(client, istest);
+    expt_handler.newExpt(client);
 
     // handler for client finishing instructions
     client.on("finished_instructions", function() {
@@ -61,9 +61,9 @@ initializeClient = function(client) {
     })
 
     // handler for player signaling that they're ready for the survey
-    client.on("request_survey", function() {
+    client.on("request_survey", function(data) {
         console.log("app.js:\t detected survey request.");
-        expt_handler.showSurvey(client);
+        expt_handler.showSurvey(client, data);
     });
 
     // handler for player signaling that they're ready for the next round

@@ -41,6 +41,14 @@ io.on("connection", function (client) {
     console.log("app.js:\t new user connected");
     client.istest = client.handshake.query.istest == "true";
     client.userid = uuidV4();
+    // Add prolific variables
+    if ("prolific_pid" in client.handshake.query &&
+        "prolific_study_id" in client.handshake.query &&
+        "prolific_session_id" in client.handshake.query) {
+        client.prolific_pid = client.handshake.query.prolific_pid;
+        client.prolific_study_id = client.handshake.query.prolific_study_id;
+        client.prolific_session_id = client.handshake.query.prolific_session_id;
+    }
     // tell the client it connected successfully and pass along unique ID
     client.emit("on_connected", {id: client.userid}); // NB: client doesn't currently do anything with passed in id
     initializeClient(client);

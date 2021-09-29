@@ -1,0 +1,14 @@
+{
+  "debrief_start_ts": "2021-09-29T01:34:19.384Z",
+  "slider1_text": "<p>How close do you think the robot would be to hitting a target in a <i>new location</i> in the sandpit, with the <i>same ramp and ball?</i></p>",
+  "slider1_response": "7",
+  "slider2_text": "<p>How close do you think the robot would be to hitting a target in a <i>familiar location</i> in the sandpit, with the <i>same ramp</i> but a <i>new ball that was twice as heavy?</i></p>",
+  "slider2_response": "4",
+  "free_response": "I did not\nI think it was a bit random but many times if the cone was closer to the table the robot performance would improve",
+  "debrief_end_ts": "2021-09-29T01:35:37.971Z",
+  "client_id": "b6bfdc3c-ba69-4f33-b186-e76d38318bbf",
+  "agent_type": "learning_agent",
+  "prolific_pid": "5ea38becad3e96196b62698b",
+  "prolific_study_id": "615349c627495e709815d234",
+  "prolific_session_id": "6153be68ff7659bce46764e3"
+}

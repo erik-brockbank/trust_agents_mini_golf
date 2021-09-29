@@ -1,0 +1,14 @@
+{
+  "debrief_start_ts": "2021-09-29T16:29:15.618Z",
+  "slider1_text": "<p>How close do you think the robot would be to hitting a target in a <i>new location</i> in the sandpit, with the <i>same ramp and ball?</i></p>",
+  "slider1_response": "8",
+  "slider2_text": "<p>How close do you think the robot would be to hitting a target in a <i>familiar location</i> in the sandpit, with the <i>same ramp</i> but a <i>new ball that was twice as heavy?</i></p>",
+  "slider2_response": "6",
+  "free_response": "The robot moved slower when the target was closer to the board and faster when it was farther away (to gain momentum, I would say).",
+  "debrief_end_ts": "2021-09-29T16:30:44.290Z",
+  "client_id": "8b35ce3b-6583-4e4a-9a8a-09f37ccc34bd",
+  "agent_type": "high_competence_agent",
+  "prolific_pid": "5fae9ec53e25ee06dac48e01",
+  "prolific_study_id": "615349c627495e709815d234",
+  "prolific_session_id": "6154922c166e8dea0f1a32ef"
+}

@@ -1,0 +1,14 @@
+{
+  "debrief_start_ts": "2021-09-29T16:26:17.128Z",
+  "slider1_text": "<p>How close do you think the robot would be to hitting a target in a <i>new location</i> in the sandpit, with the <i>same ramp and ball?</i></p>",
+  "slider1_response": "7",
+  "slider2_text": "<p>How close do you think the robot would be to hitting a target in a <i>familiar location</i> in the sandpit, with the <i>same ramp</i> but a <i>new ball that was twice as heavy?</i></p>",
+  "slider2_response": "5",
+  "free_response": "Twice he changed his tempo and shoot the ball too fast.",
+  "debrief_end_ts": "2021-09-29T16:27:45.496Z",
+  "client_id": "44df927e-18e1-4d41-b4df-0ed9ecceb7d7",
+  "agent_type": "high_competence_agent",
+  "prolific_pid": "5edc753bcee6c1953c31dacd",
+  "prolific_study_id": "615349c627495e709815d234",
+  "prolific_session_id": "6154922c0650f0e15f614aac"
+}

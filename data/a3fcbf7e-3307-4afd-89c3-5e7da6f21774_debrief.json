@@ -1,0 +1,14 @@
+{
+  "debrief_start_ts": "2021-09-29T16:29:24.262Z",
+  "slider1_text": "<p>How close do you think the robot would be to hitting a target in a <i>new location</i> in the sandpit, with the <i>same ramp and ball?</i></p>",
+  "slider1_response": "7",
+  "slider2_text": "<p>How close do you think the robot would be to hitting a target in a <i>familiar location</i> in the sandpit, with the <i>same ramp</i> but a <i>new ball that was twice as heavy?</i></p>",
+  "slider2_response": "7",
+  "free_response": "No, nothing.",
+  "debrief_end_ts": "2021-09-29T16:29:52.985Z",
+  "client_id": "a3fcbf7e-3307-4afd-89c3-5e7da6f21774",
+  "agent_type": "high_competence_agent",
+  "prolific_pid": "5f00c385e2e8aa0c8d908f2e",
+  "prolific_study_id": "615349c627495e709815d234",
+  "prolific_session_id": "6154922a3801e36159f0f0c5"
+}
